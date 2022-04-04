@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background: hsl(257, 24%, 11%);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+#cc{
+  font-size: 17px;
+  color: white;
+  position: absolute;
+  bottom: 2.15%;
+  color: white;
+  display: inline;
+  text-decoration: none;
+  background-image: linear-gradient(#00ffbf, #00ff9d);
+  background-size: 0% 3px;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  transition: all 0.3s linear;
+}
+#cc:hover{
+  background-size: 100% 2px;
+
+}
+#logo{
+    display: block;
+    height: 15.5%;
+    position: absolute;
+    top: 1.5%;
+    filter: drop-shadow(1px 1px 62.5px rgb(0, 255, 191));
+}
+blurSelection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(50px) saturate(166%);
+    -webkit-backdrop-filter: blur(20px) saturate(166%);
+    background-color: rgba(0, 0, 0, 0.43);
+  }
+  popup{
+    font-size: 13px;
+    text-align: center;
+    padding: 1.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 80%;
+    background: rgb(59,41,77);
+    background: linear-gradient(45deg, rgba(59,41,77,1) 0%, rgba(36,24,73,1) 100%);
+    border-radius: 22.5px;
+  }
+  #cookieImage{
+    position: relative;
+    bottom: 30%;
+    display: block;
+    height: 25.5%;
+    width: 25.5%;
+    background: url(cookies.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.5s linear;
+  }
+  #cookieImage:hover{
+    transform: rotateY(360deg) scale(1.25);
+    transition: all 0.5s linear;
+  }
+  #cookieTxt{
+    position: absolute;
+    color: white;
+  }
+  #acceptCookie_btn{
+    position: absolute;
+    bottom: 31.25%;
+    display: block;
+    height: 5.5%;
+    width: 55.5%;
+    font-size: 30px;
+    background: rgb(25, 0, 49);
+    color: white;
+    border-radius: 15px;
+    border: none;
+    transition: all 0.15s linear;
+  }
+  #acceptCookie_btn:hover{
+    background: rgb(40, 0, 77);
+    font-size: 35.25;
+    transition: all 0.15s linear;
+  }
+  #acceptCookie_btn:active{
+    background: rgb(67, 0, 129);
+    border: solid 2px rgb(20, 20, 20);
+    transition: background 0.05s linear;
+  }
+  #declineCookie_btn{
+    position: absolute;
+    right: 15%;
+    top: 26.75%;
+    display: block;
+    height: 66.5px;
+    width: 66.5px;
+    background-image: url(NOcookies.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: all 0.15s linear;
+    border: none;
+  }
+  #declineCookie_btn:hover{
+    transform: rotate(360deg) scale(1.1);
+    transition: all  transform 0.15s linear;
+  }
+  #declineCookie_btn:active{
+    transition: background-color 0.05s linear;
+  }
+  #removeCookies{
+    background-image: url(NOcookies.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    transition: all 0.15s linear;
+    border: none;
+    display: none;
+    height: 66.5px;
+    width: 66.5px;
+    position: absolute;
+    right: 10%;
+    bottom: 2%;
+  }
+  #removeCookies:hover{
+    transform: scale(1.15);
+    filter: brightness(1.5);
+    transition: all transform 0.15s linear;
+  }
+  #credits{
+    background-image: url(copyright.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    transition: all 0.15s linear;
+    border: none;
+    display: block;
+    height: 66.5px;
+    width: 66.5px;
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    transition: all transform 0.15s linear;
+  }
+  #credits:hover{
+    transform: scale(1.15);
+    filter: brightness(1.15);
+    transition: all transform 0.15s linear;
+  }
+  blurSelection2{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(50px) saturate(166%);
+    -webkit-backdrop-filter: blur(20px) saturate(166%);
+    background-color: rgba(0, 0, 0, 0.43);
+  }
+  creditsPoput{
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 3.25%;
+    padding-top: 9%;
+    height: 50.25%;
+    width: 85%;
+    border-radius: 22.5px;
+    background: linear-gradient(45deg, rgba(59,41,77,1) 0%, rgba(36,24,73,1) 100%);
+    font-size: 17.5px;
+  }
+  creditsPoput a{
+    color: white;
+    margin: 50%;
+  }
+  #closeCredits{
+    background-image: url(cross.png);
+    filter: invert(1);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    transition: all 0.15s linear;
+    border: none;
+    display: block;
+    height: 42.5px;
+    width: 42.5px;
+    position: absolute;
+    right: 10%;
+    top: 26%;
+    transition: all transform 0.15s linear;
+  }
+  #closeCredits:hover{
+    transform: scale(1.15);
+    transition: all transform 0.15s linear;
+  }
+  canvas{
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: hsl(257, 24%, 11%);
+  }
+  #paypal{
+    cursor: pointer;
+    position: absolute;
+    left: 4%;
+    bottom: 2%;
+    display: block;
+    height: 75px;
+    width: 75px;
+    background-color: rgb(240, 240, 240);
+    border: solid 3.25px rgb(240, 240, 240);
+    font-size: 6px;
+    border-radius: 10px;
+    background-image: url(paypal.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.15s linear;
+  }
+  #paypal:hover{
+    transform: scale(1.15);
+    transition: all 0.15s linear;
+  }
+  loaderWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: hsl(257, 24%, 11%);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  loadCircle{
+    position: absolute;
+    display: block;
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    background: transparent;
+    border-top: solid 20px rgba(128,23,232,1);
+    filter: drop-shadow(1px 1px 32.5px rgba(128,23,232,1));
+    animation: loadAnimation1 2s linear infinite;
+  }
+  loadCircle2{
+    position: absolute;
+    display: block;
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    background: transparent;
+    border-left: solid 20px rgba(189,34,34,1);
+    filter: drop-shadow(1px 1px 32.5px rgba(189,34,34,1));
+    animation: loadAnimation2 2s linear infinite;
+  }
+  @keyframes loadAnimation1{
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes loadAnimation2{
+    100%{
+      transform: rotate(-360deg);
+    }
+  }
+  loadingNumber{
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    bottom: 23.75%;
+  }
+  #MOgame1{
+    position: absolute;
+    top: 50%;
+    display: block;
+    height: 95px;
+    width: 95px;
+    background: url(MO-game1/tic-tac-toe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.15s linear;
+  }
+  #MOgame1:hover{
+    transform: scale(1.15);
+    transition: all 0.15s linear;
+  }
+  #calendary{
+    position: absolute;
+    top: 50%;
+    display: block;
+    height: 95px;
+    width: 95px;
+    background: url(calendar.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.15s linear;
+  }
+  #calendary:hover{
+    transform: scale(1.15);
+    transition: all 0.15s linear;
+  }

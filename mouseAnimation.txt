@@ -1,0 +1,47 @@
+circle{
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: rgb(0, 255, 55);
+  filter: drop-shadow(1px 1px 7.25px rgb(0, 255, 55));
+  animation: animationRainbowMouse 0.5s linear infinite;
+}@keyframes animationRainbowMouse{
+  100%{
+    filter: drop-shadow(1px 1px 7.25px rgb(0, 255, 55)) hue-rotate(360deg);
+  }
+}
+
+
+
+
+
+
+let content = document.querySelector('content');
+let newCircle = "";
+let newCircle_class = 0;
+
+content.onmousemove = (e)=>{
+  if(e.target.id != 'content'){}else{
+    x=e.clientX;
+    y=e.clientY;
+
+    newCircle = document.createElement('circle');
+    newCircle.id = newCircle_class;
+    newCircle_class++
+
+    newCircle.style.top = y-70;
+    newCircle.style.left = x;
+
+    content.appendChild(newCircle);
+  }
+}
+
+let removeCircle_id = 0;
+let removeCircle = setInterval(()=>{
+  if(removeCircle_id<=newCircle_class){
+    document.getElementById(removeCircle_id).remove();
+    removeCircle_id++
+  }
+},12.5)

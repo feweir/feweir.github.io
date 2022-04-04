@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}   
+input:focus,textarea:focus {
+  outline:none;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: rgb(87,0,138);
+  background: linear-gradient(45deg, rgba(87,0,138,1) 0%, rgba(59,17,115,1) 34%, rgba(100,11,92,1) 68%, rgba(82,0,181,1) 100%);
+  background-size: cover;
+  background-repeat: repeat;
+}
+calendarSpace{
+  background: rgb(87,0,138);
+  background: linear-gradient(45deg, rgba(87,0,138,1) 0%, rgba(59,17,115,1) 34%, rgba(100,11,92,1) 68%, rgba(82,0,181,1) 100%);
+  background-size: cover;
+  background-repeat: repeat;
+}
+calBox{
+  background-color: rgba(62, 62, 62, 0.71);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  height: 45px;
+  width: 45px;
+  font-size: 30px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 1.15%;
+  transition: all 0.15s linear;
+}
+calBox:hover{
+  border: solid 3px rgb(255, 255, 255);
+  box-shadow: 0px 0px 30px 5px #00ffbf;
+  transition: all 0.01s linear;
+}
+h1{color: black;}
+.monthClass{
+  margin-left: 1%;
+  padding: 1.23%;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  height: 10%;
+  margin-top: 2%;
+  width: 98%;
+  backdrop-filter: blur(35px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  background-color: rgba(24, 24, 24, 0.77);
+  border-radius: 12px;
+}
+#lastmonth{
+  display: block;
+  height: 350px;
+  width: 90%;
+}
+#monthH1{
+  color: white;
+  text-transform: uppercase;
+  margin-top: 2.5%;
+  width: 100%;
+  text-align: center;
+  font-size: 35px
+}
+#poppup{
+  display: none;       /*           NONE                */
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 275px;
+  width: 100%;
+  background: rgb(36, 36, 36);
+  border-radius: 22.5px;
+}
+#calBoxPrev{
+  color: white;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  backdrop-filter: blur(18px) saturate(200%);
+  -webkit-backdrop-filter: blur(18px) saturate(200%);
+  background-color: rgba(62, 62, 62, 0.71);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  height: 30px;
+  width: 30px;
+  font-size: 1%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: solid 3px rgb(255, 255, 255);
+  box-shadow: 0px 0px 30px 5px #00ffbf;
+}
+#time{
+  display: flex;
+  flex-direction: row;
+  height: 10%;
+  width: 50%;
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  background: transparent;
+  text-align: center;
+  color: white;
+}
+#hour_input{
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: white;
+  border: none;
+  border-bottom: solid 3px rgb(24, 24, 24);
+  background: transparent;
+  margin-right: 10px;
+  text-align: center;
+}
+#minuts_input{
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: solid 3px rgb(24, 24, 24);
+  color: white;
+  margin-left: transparent;
+  text-align: center;
+}
+h1{color: white;}
+#date{
+  display: flex;
+  flex-direction: row;
+  height: 10%;
+  width: 50%;
+  position: absolute;
+  top: 29.5%;
+  right: 20%;
+  background: transparent;
+  text-align: center;
+  color: white;
+}
+#dayPop{
+  display: block;
+  height: 40px;
+  width: 100px;
+  color: white;
+  border: none;
+  border-bottom: solid 3px rgb(24, 24, 24);
+  background: transparent;
+  margin-right: 10px;
+  font-size: 15px;
+  padding-top: 10px;
+  text-align: center;
+}
+#monthPop{
+  display: block;
+  height: 40px;
+  width: 100px;
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: solid 3px rgb(24, 24, 24);
+  color: white;
+  font-size: 15px;
+  padding-top: 10px;
+  text-align: center;
+}
+#description{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  position: absolute;
+  top: 45.5%;
+  border-radius: 10px;
+  border: solid 2px rgb(24, 24, 24);
+  resize: none;
+  right: 20%;
+  width: 90%;
+  left: 4.5%;
+  height: 20%;
+  background: transparent;
+  color: white;
+  padding: 7.5px;
+}
+#save{
+  position: absolute;
+  bottom: 11%;
+  right: 15.5%;
+  display: block;
+  height: 45px;
+  width: 45px;
+  border: none;
+  background: url(bookmark.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 1 linear infinite;
+}
+#trash{
+  position: absolute;
+  bottom: 14%;
+  right: 5%;
+  display: block;
+  height: 35px;
+  width: 35px;
+  border: none;
+  background: url(trash-can.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 1 linear infinite;
+}
+#save:hover{
+  transform: scale(1.3);
+  transition: transform 1 linear infinite;
+  filter: drop-shadow(1px 1px 10px rgb(174, 0, 255));
+}
+#trash:hover{
+  transform: scale(1.3);
+  transition: transform 1 linear infinite;
+  filter: drop-shadow(1px 1px 10px rgb(0, 255, 221));
+}
+.re{
+  border: solid 4px rgb(255, 0, 234);
+  filter: drop-shadow(1px 1px 10px rgb(255, 0, 234));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#credits{
+  background-image: url(copyright.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  transition: all 0.15s linear;
+  border: none;
+  display: block;
+  height: 50.5px;
+  width: 50.5px;
+  position: absolute;
+  right: 2%;
+  top: 1%;
+  transition: all transform 0.15s linear;
+}
+#credits:hover{
+  transform: scale(1.15);
+  filter: brightness(1.15);
+  transition: all transform 0.15s linear;
+}
+blurSelection2{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(50px) saturate(166%);
+  -webkit-backdrop-filter: blur(20px) saturate(166%);
+  background-color: rgba(0, 0, 0, 0.43);
+}
+creditsPoput{
+  display: block;
+  text-align: center;
+  color: white;
+  padding: 3.25%;
+  padding-top: 9%;
+  height: 50.25%;
+  width: 85%;
+  border-radius: 22.5px;
+  background: linear-gradient(45deg, rgba(59,41,77,1) 0%, rgba(36,24,73,1) 100%);
+  font-size: 17.5px;
+}
+creditsPoput a{
+  color: white;
+  margin: 50%;
+}
+#closeCredits{
+  background-image: url(cross.png);
+  filter: invert(1);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  transition: all 0.15s linear;
+  border: none;
+  display: block;
+  height: 42.5px;
+  width: 42.5px;
+  position: absolute;
+  right: 10%;
+  top: 26%;
+  transition: all transform 0.15s linear;
+}
+#closeCredits:hover{
+  transform: scale(1.15);
+  transition: all transform 0.15s linear;
+}
