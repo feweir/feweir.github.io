@@ -51,7 +51,7 @@ if(window.innerHeight>window.innerWidth){
       <loadingNumber>0%</loadingNumber>
 	  </loaderWrapper>
 
-    <a id="cc" href="https://github.com/Feweir">&copy Copyright by &#127791Feweir 2022-2030 feweirebbasta404@gmail.com</a>
+    <a id="cc" href="https://github.com/Feweir">&copy Copyright by &#127791Feweir 2022 feweirebbasta404@gmail.com</a>
 
   
     `;
@@ -74,7 +74,7 @@ if(window.innerHeight>window.innerWidth){
     
     <cardBackground></cardBackground>
     <card>
-      <a id="cc" href="https://github.com/Feweir">&copy Copyright by &#127791Feweir 2022-2030 feweirebbasta404@gmail.com</a>
+      <a id="cc" href="https://github.com/Feweir">&copy Copyright by &#127791Feweir 2022 feweirebbasta404@gmail.com</a>
     
       <a href="" id="calendary" title="CALENDAR WEB VERSION"></a>
 
