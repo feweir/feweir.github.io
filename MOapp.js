@@ -125,22 +125,6 @@ scene.background = new THREE.Color( cubeColor20 );
 
 render()*/
 
-setTimeout(()=>{
-  document.querySelector('loaderWrapper').remove()
-},1250);
-
-let loadingNumber = document.querySelector('loadingNumber');
-
-loadingValue = 0;
-
-setInterval(function() {
-  if(loadingValue<= 100){
-    loadingNumber.textContent = `${loadingValue}%`;
-    loadingValue++
-  }else{return false}
-},12.5)
-
-
 
 
 
@@ -165,5 +149,3 @@ setInterval(() => {
     calendar.onclick = () => {alert('THIS CALNDER WORK ONLY WITH COOKIE')}
   }
 }, 0);
-
-

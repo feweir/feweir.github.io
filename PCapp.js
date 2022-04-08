@@ -114,31 +114,6 @@ closeCredits.onclick = function() {
   blurSelection2.style.display = 'none';
 }
 
-/*         LOADING         */
-
-
-let loadingBar = document.querySelector('loadingBar');
-
-loadingBar.id = 'loadingActive';
-
-
-window.onload = function() {
-  setTimeout(function() {
-    document.querySelector('loaderWrapper').remove();
-  },1250);
-}
-
-let loadingNumber = document.querySelector('loadingNumber');
-
-loadingValue = 0;
-
-setInterval(function() {
-  if(loadingValue<= 100){
-    loadingNumber.textContent = `${loadingValue}%`;
-    loadingValue++
-  }else{return false}
-},12.5)
-
 
 
 /*
