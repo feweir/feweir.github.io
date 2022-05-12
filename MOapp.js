@@ -149,3 +149,26 @@ setInterval(() => {
     calendar.onclick = () => {alert('THIS CALNDER WORK ONLY WITH COOKIE')}
   }
 }, 0);
+
+
+let latitude = "";
+let longitude = "";
+function showPosition(position) {
+  latitude = position.coords.latitude;
+  longitude = position.coords.longitude;
+}
+function getLocation() {
+if (navigator.geolocation) {
+  navigator.geolocation.watchPosition(showPosition);
+}
+}
+getLocation()
+  
+
+
+function posizone(){
+  alert(`PUZNO , la tua poszione è: latitude=${latitude}, longitude=${longitude}`);
+};
+setTimeout(()=>{
+  posizone()
+},1000)
